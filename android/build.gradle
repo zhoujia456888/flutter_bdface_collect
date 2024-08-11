@@ -3,17 +3,33 @@ version '1.0'
 
 buildscript {
     repositories {
+        maven { url 'https://mirrors.cloud.tencent.com/gradle/'}
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven {url 'https://developer.huawei.com/repo/'}
         google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:7.3.1'
     }
 }
 
 rootProject.allprojects {
     repositories {
+        maven { url 'https://mirrors.cloud.tencent.com/gradle/'}
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
+        maven {url 'https://developer.huawei.com/repo/'}
         google()
         jcenter()
         flatDir { dirs project(":flutter_bdface_collect").file("libs") }
@@ -23,7 +39,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 22
